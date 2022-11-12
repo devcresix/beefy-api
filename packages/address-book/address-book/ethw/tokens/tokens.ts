@@ -101,7 +101,7 @@ const _tokens = {
   BIFI: {
     name: '',
     symbol: 'BIFI',
-    address: '0x0c9f28fbdfd79f7c00b805d8c63d053c146d282c',
+    address: '0x0c9f28FBdFd79f7C00B805d8c63D053c146d282c',
     chainId: 10001,
     decimals: 18,
     logoURI: '',

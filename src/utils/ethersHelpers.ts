@@ -41,10 +41,17 @@ import {
   KAVA_CHAIN_ID,
   ETH_RPC,
   ETH_CHAIN_ID,
+
+  // devcresix
+  ETHW_RPC,
+  ETHW_CHAIN_ID,
 } from '../constants';
 
 console.log(addressBookByChainId[ChainId.fantom].platforms.beefyfinance.multicall);
 const MULTICALLS: Record<ChainId, Pick<BeefyFinance, 'multicall'>['multicall']> = {
+  // devcresix
+  [ChainId.ethw]: addressBookByChainId[ChainId.ethw].platforms.beefyfinance.multicall,
+
   [ChainId.bsc]: addressBookByChainId[ChainId.bsc].platforms.beefyfinance.multicall,
   [ChainId.heco]: addressBookByChainId[ChainId.heco].platforms.beefyfinance.multicall,
   [ChainId.polygon]: addressBookByChainId[ChainId.polygon].platforms.beefyfinance.multicall,
@@ -67,6 +74,9 @@ const MULTICALLS: Record<ChainId, Pick<BeefyFinance, 'multicall'>['multicall']> 
 };
 
 const clients: Record<keyof typeof ChainId, ethers.providers.JsonRpcProvider[]> = {
+  // devcresix
+  ethw: [],
+
   bsc: [],
   heco: [],
   avax: [],
@@ -87,6 +97,10 @@ const clients: Record<keyof typeof ChainId, ethers.providers.JsonRpcProvider[]> 
   kava: [],
   ethereum: [],
 };
+
+// devcresix
+clients.ethw.push(new ethers.providers.JsonRpcProvider(ETHW_RPC));
+
 BSC_RPC_ENDPOINTS.forEach(endpoint => {
   clients.bsc.push(new ethers.providers.JsonRpcProvider(endpoint));
 });
@@ -110,6 +124,9 @@ clients.kava.push(new ethers.providers.JsonRpcProvider(KAVA_RPC));
 clients.ethereum.push(new ethers.providers.JsonRpcProvider(ETH_RPC));
 
 export const chainRandomClients = {
+  // devcresix
+  ethwRandomClient: () => clients.ethw[~~(clients.ethw.length * Math.random())],
+
   bscRandomClient: () => clients.bsc[~~(clients.bsc.length * Math.random())],
   hecoRandomClient: () => clients.heco[~~(clients.heco.length * Math.random())],
   avaxRandomClient: () => clients.avax[~~(clients.avax.length * Math.random())],
