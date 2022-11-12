@@ -56,6 +56,9 @@ const OPTIMISM_RPC = process.env.OPTIMISM_RPC || 'https://rpc.ankr.com/optimism'
 const KAVA_RPC = process.env.KAVA_RPC || 'https://evm.kava.io';
 const ETH_RPC = process.env.ETH_RPC || 'https://rpc.ankr.com/eth';
 
+// devcresix
+const ETHW_RPC = process.env.ETHW_RPC || 'https://mainnet.ethereumpow.org';
+
 const BSC_CHAIN_ID = ChainId.bsc;
 const HECO_CHAIN_ID = ChainId.heco;
 const POLYGON_CHAIN_ID = ChainId.polygon;
@@ -75,6 +78,9 @@ const EMERALD_CHAIN_ID = ChainId.emerald;
 const OPTIMISM_CHAIN_ID = ChainId.optimism;
 const KAVA_CHAIN_ID = ChainId.kava;
 const ETH_CHAIN_ID = ChainId.ethereum;
+
+// devcresix
+const ETHW_CHAIN_ID = ChainId.ethw;
 
 const DFYN_LPF = 0.003;
 const SUSHI_LPF = 0.003;
@@ -116,6 +122,9 @@ const MULTICHAIN_RPC: Record<ChainId, string> = {
   [ChainId.optimism]: OPTIMISM_RPC,
   [ChainId.kava]: KAVA_RPC,
   [ChainId.ethereum]: ETH_RPC,
+
+  // devcresix
+  [ChainId.ethw]: ETHW_RPC,
 };
 
 const BSC_VAULTS_ENDPOINT =
@@ -183,6 +192,9 @@ const EXCLUDED_IDS_FROM_TVL = ['venus-wbnb'];
 
 export {
   API_BASE_URL,
+  // devcresix
+  ETHW_RPC,
+  ETHW_CHAIN_ID,
   BSC_RPC,
   BSC_RPC_ENDPOINTS,
   BSC_CHAIN_ID,

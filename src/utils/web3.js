@@ -3,6 +3,10 @@ const { chainRandomClients, _web3Factory, _multicallAddress } = require('./web3H
 // keep backwards compat for commonJs export system, but still get types in code by importing from web3Helpers.js
 
 module.exports = {
+  // devcresix
+  get ethwWeb3() {
+    return chainRandomClients.ethwRandomClient();
+  },
   get bscWeb3() {
     return chainRandomClients.bscRandomClient();
   },

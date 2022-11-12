@@ -41,9 +41,16 @@ import {
   KAVA_CHAIN_ID,
   ETH_RPC,
   ETH_CHAIN_ID,
+
+  // devcresix
+  ETHW_RPC,
+  ETHW_CHAIN_ID,
 } from '../constants';
 
 const MULTICALLS: Record<ChainId, Pick<BeefyFinance, 'multicall'>['multicall']> = {
+  // devcresix
+  [ChainId.ethw]: addressBookByChainId[ChainId.ethw].platforms.beefyfinance.multicall,
+
   [ChainId.bsc]: addressBookByChainId[ChainId.bsc].platforms.beefyfinance.multicall,
   [ChainId.heco]: addressBookByChainId[ChainId.heco].platforms.beefyfinance.multicall,
   [ChainId.polygon]: addressBookByChainId[ChainId.polygon].platforms.beefyfinance.multicall,
@@ -66,6 +73,9 @@ const MULTICALLS: Record<ChainId, Pick<BeefyFinance, 'multicall'>['multicall']> 
 };
 
 const clients: Record<keyof typeof ChainId, Web3[]> = {
+  // devcresix
+  ethw: [],
+
   bsc: [],
   heco: [],
   avax: [],
@@ -86,6 +96,10 @@ const clients: Record<keyof typeof ChainId, Web3[]> = {
   kava: [],
   ethereum: [],
 };
+
+// devcresix
+clients.ethw.push(new Web3(ETHW_RPC));
+
 BSC_RPC_ENDPOINTS.forEach(endpoint => {
   clients.bsc.push(new Web3(endpoint));
 });
@@ -109,6 +123,8 @@ clients.kava.push(new Web3(KAVA_RPC));
 clients.ethereum.push(new Web3(ETH_RPC));
 
 export const chainRandomClients = {
+  // devcresix
+  ethwRandomClient: () => clients.ethw[~~(clients.ethw.length * Math.random())],
   bscRandomClient: () => clients.bsc[~~(clients.bsc.length * Math.random())],
   hecoRandomClient: () => clients.heco[~~(clients.heco.length * Math.random())],
   avaxRandomClient: () => clients.avax[~~(clients.avax.length * Math.random())],
@@ -132,6 +148,10 @@ export const chainRandomClients = {
 
 export const _web3Factory = (chainId: ChainId) => {
   switch (chainId) {
+    // devcresix
+    case ETHW_CHAIN_ID:
+      return chainRandomClients.ethwRandomClient();
+
     case BSC_CHAIN_ID:
       return chainRandomClients.bscRandomClient();
     case HECO_CHAIN_ID:

@@ -3,6 +3,7 @@ const { getMaticApys } = require('./matic');
 const { getHecoApys } = require('./heco');
 const { getFantomApys } = require('./fantom');
 const { getBSCApys } = require('./bsc');
+const { getETHWApys } = require('./ethw'); // devcresix
 const { getOneApys } = require('./one');
 const { getArbitrumApys } = require('./arbitrum');
 const { getCeloApys } = require('./celo');
@@ -37,25 +38,29 @@ const updateApys = async () => {
 
   try {
     const results = await Promise.allSettled([
-      getMaticApys(),
-      getAvaxApys(),
-      getFantomApys(),
-      getHecoApys(),
-      getBSCApys(),
-      getOneApys(),
-      getArbitrumApys(),
-      getCeloApys(),
-      getMoonriverApys(),
-      getCronosApys(),
-      getAuroraApys(),
-      getFuseApys(),
-      getMetisApys(),
-      getMoonbeamApys(),
-      getSysApys(),
-      getEmeraldApys(),
-      getOptimismApys(),
-      getKavaApys(),
-      getEthereumApys(),
+      // getMaticApys(),
+      // getAvaxApys(),
+      // getFantomApys(),
+      // getHecoApys(),
+      // getBSCApys(),
+
+      // devcreix
+      getETHWApys(),
+
+      // getOneApys(),
+      // getArbitrumApys(),
+      // getCeloApys(),
+      // getMoonriverApys(),
+      // getCronosApys(),
+      // getAuroraApys(),
+      // getFuseApys(),
+      // getMetisApys(),
+      // getMoonbeamApys(),
+      // getSysApys(),
+      // getEmeraldApys(),
+      // getOptimismApys(),
+      // getKavaApys(),
+      // getEthereumApys(),
     ]);
 
     for (const result of results) {

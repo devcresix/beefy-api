@@ -253,12 +253,17 @@ import spiritV2Pools from '../../data/fantom/spiritVolatileLpPools.json';
 import hermesPools from '../../data/metis/hermesLpPools.json';
 import { fetchVaultPrices } from '../../utils/fetchVaultPrices';
 
+// devcresix
+import lfgPools from '../../data/ethw/lfgLpPools.json';
+
 const INIT_DELAY = 2 * 1000;
 const REFRESH_INTERVAL = 5 * 60 * 1000;
 
 // FIXME: if this list grows too big we might hit the ratelimit on initialization everytime
 // Implement in case of emergency -> https://github.com/beefyfinance/beefy-api/issues/103
 const pools = [
+  // devcresix
+  ...lfgPools,
   ...hermesPools,
   ...spiritV2Pools,
   ...conePools,
@@ -534,6 +539,7 @@ const knownPrices = {
   aUSDT: 1,
   aDAI: 1,
   aUSDC: 1,
+  BILL: 3,
 };
 
 let tokenPricesCache: Promise<any>;

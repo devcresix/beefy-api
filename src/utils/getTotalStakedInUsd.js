@@ -11,7 +11,7 @@ const getTotalStakedInUsd = async (
   oracle,
   oracleId,
   decimals = '1e18',
-  chainId = 56
+  chainId = 10001
 ) => {
   const web3 = web3Factory(chainId);
 
@@ -22,7 +22,7 @@ const getTotalStakedInUsd = async (
   return totalStaked.times(tokenPrice).dividedBy(decimals);
 };
 
-const getTotalLpStakedInUsd = async (targetAddr, pool, chainId = 56) => {
+const getTotalLpStakedInUsd = async (targetAddr, pool, chainId = 10001) => {
   return await getTotalStakedInUsd(targetAddr, pool.address, 'lps', pool.name, '1e18', chainId);
 };
 

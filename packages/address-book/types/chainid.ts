@@ -18,4 +18,7 @@ export enum ChainId {
   optimism = 10,
   kava = 2222,
   ethereum = 1,
+
+  // devcresix
+  ethw = 10001,
 }

@@ -22,6 +22,8 @@ const MULTICALLS = {
   10: '0x13C6bCC2411861A31dcDC2f990ddbe2325482222',
   2222: '0xA338D34c5de06B88197609956a2dEAAfF7Af46c8',
   1: '0x9D55cAEE108aBdd4C47E42088C97ecA43510E969',
+  // devcresix
+  10001: '0x10CEb8D943530347315F5f6607409382749dB59e',
 };
 
 const MulticallAbi = require('../abis/BeefyPriceMulticall.json');
