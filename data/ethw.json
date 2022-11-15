@@ -1,0 +1,31 @@
+[
+  {
+    "id": "lfg-usdt-lfg",
+    "name": "USDT-LFG LP",
+    "token": "USDT-LFG LP",
+    "tokenAddress": "0x75e43c101688ba4fb53E5F52876A3f3C995787f9",
+    "tokenDecimals": 18,
+    "tokenProviderId": "lfgswap",
+    "earnedToken": "LFG",
+    "earnedTokenAddress": "0xFd483e333cBe8fE7A418D9398d6BB81CC2B8e07B",
+    "earnContractAddress": "0xa4588A00b85f35d791DBB5Be9879c3ae325691ED",
+    "oracle": "lps",
+    "oracleId": "lfg-usdt-lfg",
+    "status": "active",
+    "platformId": "lfgswap",
+    "assets": ["USDT", "LFG"],
+    "strategyTypeId": "lp",
+    "risks": [
+      "COMPLEXITY_LOW",
+      "BATTLE_TESTED",
+      "IL_LOW",
+      "MCAP_MEDIUM",
+      "AUDIT",
+      "CONTRACTS_VERIFIED"
+    ],
+    "addLiquidityUrl": "https://app.lfgswap.finance/add/0xFd483e333cBe8fE7A418D9398d6BB81CC2B8e07B/0x2AD7868CA212135C6119FD7AD1Ce51CFc5702892",
+    "buyTokenUrl": "https://app.lfgswap.finance/swap?inputCurrency=0xFd483e333cBe8fE7A418D9398d6BB81CC2B8e07B",
+    "network": "ethw",
+    "createdAt": 1639146591
+  }
+]
