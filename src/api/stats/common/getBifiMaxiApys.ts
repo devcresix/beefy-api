@@ -27,10 +27,10 @@ export const getBifiMaxiApys = async (params: BifiApyParams) => {
 
   const simpleApy = yearlyRewardsInUsd.dividedBy(totalStakedInUsd);
   const shareAfterBeefyPerformanceFee =
-    1 - getTotalPerformanceFeeForVault(params.chain + '-bill-maxi');
+    1 - getTotalPerformanceFeeForVault(params.chain + '-bhc-maxi');
   const apy = compound(simpleApy, DAILY_HPY, 1, shareAfterBeefyPerformanceFee);
 
-  return { [params.chain + '-bill-maxi']: apy };
+  return { [params.chain + '-bhc-maxi']: apy };
 };
 
 const getYearlyRewardsInUsd = async (params: BifiApyParams) => {

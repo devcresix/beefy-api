@@ -16,10 +16,10 @@ const ETHW = {
 const _tokens = {
   // devcresix
   ETHW,
-  WBNB: ETHW,
+  WETHW: ETHW,
   WNATIVE: ETHW,
   LFG: {
-    name: '',
+    name: 'LFG Token',
     symbol: 'LFG',
     address: '0xFd483e333cBe8fE7A418D9398d6BB81CC2B8e07B',
     chainId: 10001,
@@ -92,16 +92,6 @@ const _tokens = {
     name: '',
     symbol: 'EID',
     address: '0xfb351555CE949c67A956E8F4a16eCF4a85711E26',
-    chainId: 10001,
-    decimals: 18,
-    logoURI: '',
-    website: '',
-    description: '',
-  },
-  BIFI: {
-    name: '',
-    symbol: 'BIFI',
-    address: '0x0c9f28FBdFd79f7C00B805d8c63D053c146d282c',
     chainId: 10001,
     decimals: 18,
     logoURI: '',

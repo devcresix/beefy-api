@@ -1,9 +1,9 @@
-const getLFGApys = require('./lfgswap/getLFGApys');
+const { getLFGLPApys } = require('./lfgswap/getLFGLPApys');
 const getBifiMaxiApy = require('./billionvault/getBifiMaxiApy');
 const getBifiGovApy = require('./billionvault/getBifiGovApy');
 
-const getApys = [getBifiGovApy, getBifiMaxiApy];
-//const getApys = [getLFGApys, getBifiGovApy, getBifiMaxiApy];
+// const getApys = [getBifiGovApy, getBifiMaxiApy];
+const getApys = [getLFGLPApys];
 // ^^ APYs are sorted alphabetically
 // devcresix
 const getETHWApys = async () => {

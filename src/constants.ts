@@ -127,6 +127,10 @@ const MULTICHAIN_RPC: Record<ChainId, string> = {
   [ChainId.ethw]: ETHW_RPC,
 };
 
+//devcresix
+const ETHW_VAULTS_ENDPOINT =
+  'https://raw.githubusercontent.com/devcresix/beefy-api/ethw/data/ethw.json';
+
 const BSC_VAULTS_ENDPOINT =
   'https://raw.githubusercontent.com/beefyfinance/beefy-v2/prod/src/config/vault/bsc.json';
 const HECO_VAULTS_ENDPOINT =
@@ -167,25 +171,27 @@ const ETHEREUM_VAULTS_ENDPOINT =
   'https://raw.githubusercontent.com/beefyfinance/beefy-v2/prod/src/config/vault/ethereum.json';
 
 const MULTICHAIN_ENDPOINTS = {
-  bsc: BSC_VAULTS_ENDPOINT,
-  avax: AVAX_VAULTS_ENDPOINT,
-  polygon: POLYGON_VAULTS_ENDPOINT,
-  fantom: FANTOM_VAULTS_ENDPOINT,
-  one: ONE_VAULTS_ENDPOINT,
-  arbitrum: ARBITRUM_VAULTS_ENDPOINT,
-  celo: CELO_VAULTS_ENDPOINT,
-  moonriver: MOONRIVER_VAULTS_ENDPOINT,
-  cronos: CRONOS_VAULTS_ENDPOINT,
-  aurora: AURORA_VAULTS_ENDPOINT,
-  fuse: FUSE_VAULTS_ENDPOINT,
-  metis: METIS_VAULTS_ENDPOINT,
-  moonbeam: MOONBEAM_VAULTS_ENDPOINT,
-  // sys: SYS_VAULTS_ENDPOINT,
-  emerald: EMERALD_VAULTS_ENDPOINT,
-  optimism: OPTIMISM_VAULTS_ENDPOINT,
-  heco: HECO_VAULTS_ENDPOINT,
-  kava: KAVA_VAULTS_ENDPOINT,
+  // bsc: BSC_VAULTS_ENDPOINT,
+  // avax: AVAX_VAULTS_ENDPOINT,
+  // polygon: POLYGON_VAULTS_ENDPOINT,
+  // fantom: FANTOM_VAULTS_ENDPOINT,
+  // one: ONE_VAULTS_ENDPOINT,
+  // arbitrum: ARBITRUM_VAULTS_ENDPOINT,
+  // celo: CELO_VAULTS_ENDPOINT,
+  // moonriver: MOONRIVER_VAULTS_ENDPOINT,
+  // cronos: CRONOS_VAULTS_ENDPOINT,
+  // aurora: AURORA_VAULTS_ENDPOINT,
+  // fuse: FUSE_VAULTS_ENDPOINT,
+  // metis: METIS_VAULTS_ENDPOINT,
+  // moonbeam: MOONBEAM_VAULTS_ENDPOINT,
+  // // sys: SYS_VAULTS_ENDPOINT,
+  // emerald: EMERALD_VAULTS_ENDPOINT,
+  // optimism: OPTIMISM_VAULTS_ENDPOINT,
+  // heco: HECO_VAULTS_ENDPOINT,
+  // kava: KAVA_VAULTS_ENDPOINT,
   // ethereum: ETHEREUM_VAULTS_ENDPOINT,
+  // devcresix
+  ethw: ETHW_VAULTS_ENDPOINT, //ETHW_VAULTS_ENDPOINT
 };
 
 const EXCLUDED_IDS_FROM_TVL = ['venus-wbnb'];
@@ -195,6 +201,7 @@ export {
   // devcresix
   ETHW_RPC,
   ETHW_CHAIN_ID,
+  ETHW_VAULTS_ENDPOINT,
   BSC_RPC,
   BSC_RPC_ENDPOINTS,
   BSC_CHAIN_ID,

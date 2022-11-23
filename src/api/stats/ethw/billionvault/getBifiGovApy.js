@@ -10,7 +10,7 @@ const { getContractWithProvider } = require('../../../../utils/contractHelper');
 const BIFI = '0x0c9f28FBdFd79f7C00B805d8c63D053c146d282c';
 const REWARDS = '0x2B7c8977087420E0f29069B4DB74bF35E23FAA8a';
 const ORACLE = 'tokens';
-const ORACLE_ID = 'BILL';
+const ORACLE_ID = 'BHC';
 const DECIMALS = '1e18';
 const BLOCKS_PER_DAY = 28800;
 
@@ -25,10 +25,10 @@ const getBifiGovApy = async () => {
   // devcresix
   return {
     apys: {
-      'bill-gov': apr,
+      'bhc-gov': apr,
     },
     apyBreakdowns: {
-      'bill-gov': {
+      'bhc-gov': {
         vaultApr: apr,
       },
     },

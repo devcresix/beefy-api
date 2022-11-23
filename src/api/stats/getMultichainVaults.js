@@ -69,7 +69,7 @@ const updateChainVaults = async chain => {
     vaultsByChain[chain] = chainVaults;
   } catch (error) {
     console.log(`> failed to update vaults on ${chain}`);
-    console.log(error.message);
+    console.log(error);
   }
 };
 

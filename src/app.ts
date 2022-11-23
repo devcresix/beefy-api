@@ -44,10 +44,10 @@ const port = process.env.PORT || 3000;
 const start = async () => {
   initApyService();
   initPriceService();
-  // initVaultService();
+  initVaultService();
   // initBoostService();
   initVaultFeeService();
-  // initTvlService();
+  //initTvlService();
   // initBifiBuyBackService();
   // initMooTokenPriceService();
   initTokenService();

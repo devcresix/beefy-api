@@ -1,6 +1,10 @@
 const getChainTvl = require('./getChainTvl.js');
 
 const {
+  // devcresix
+  ETHW_CHAIN_ID,
+  ETHW_VAULTS_ENDPOINT,
+
   BSC_CHAIN_ID,
   BSC_VAULTS_ENDPOINT,
 
@@ -66,6 +70,13 @@ const REFRESH_INTERVAL = 15 * 60 * 1000;
 let tvl = {};
 
 const chains = [
+  // devcresix
+  {
+    chainId: ETHW_CHAIN_ID,
+    vaultsEndpoint: ETHW_VAULTS_ENDPOINT,
+    governancePool: require('../../data/ethw/governancePool.json'),
+  },
+
   {
     chainId: BSC_CHAIN_ID,
     vaultsEndpoint: BSC_VAULTS_ENDPOINT,

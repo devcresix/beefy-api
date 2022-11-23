@@ -12,7 +12,7 @@ const { getTotalPerformanceFeeForVault } = require('../../../vaults/getVaultFees
 const BIFI = '0x0c9f28FBdFd79f7C00B805d8c63D053c146d282c';
 const REWARDS = '0x2B7c8977087420E0f29069B4DB74bF35E23FAA8a';
 const ORACLE = 'tokens';
-const ORACLE_ID = 'BILL';
+const ORACLE_ID = 'BHC';
 const DECIMALS = '1e18';
 const BLOCKS_PER_DAY = 28800;
 
@@ -23,11 +23,11 @@ const getBifiMaxiApy = async () => {
   ]);
 
   const simpleApy = yearlyRewardsInUsd.dividedBy(totalStakedInUsd);
-  const shareAfterBeefyPerformanceFee = 1 - getTotalPerformanceFeeForVault('bill-maxi');
+  const shareAfterBeefyPerformanceFee = 1 - getTotalPerformanceFeeForVault('bhc-maxi');
   const apy = compound(simpleApy, DAILY_HPY, 1, shareAfterBeefyPerformanceFee);
 
   // devcresix
-  return { 'bill-maxi': apy };
+  return { 'bhc-maxi': apy };
 };
 
 const getYearlyRewardsInUsd = async () => {

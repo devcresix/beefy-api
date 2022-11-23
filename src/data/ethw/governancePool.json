@@ -1,10 +1,10 @@
 {
-  "name": "heco-bifi-gov",
-  "address": "0x5f7347fedfD0b374e8CE8ed19Fc839F59FB59a3B",
-  "tokenAddress": "0x765277EebeCA2e31912C9946eAe1021199B39C61",
+  "name": "ethw-bhc-gov",
+  "address": "0x2B7c8977087420E0f29069B4DB74bF35E23FAA8a",
+  "tokenAddress": "0x0c9f28FBdFd79f7C00B805d8c63D053c146d282c",
   "tokenDecimals": 1e18,
   "oracle": "tokens",
-  "oracleId": "BIFI",
+  "oracleId": "BHC",
   "exclude": {
     "maxi": {
       "earnedTokenAddress": "0x688724Fb44cD7eabF209Ca2B225880033e9563d2"
